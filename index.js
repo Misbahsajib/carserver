@@ -43,7 +43,13 @@ async function run() {
             const delet=await serverCollection.deleteOne(query)
             res.send(delet)
         })
-
+        // app.delete('server/:id',async(req,res)=>{
+        //     const id=req.params.id;
+        //     const query={_id:ObjectId(id)}
+        //     const delet=await serverCollection.deleteOne(query)
+        //     res.send(delet)
+        // })
+      
         
     }
     finally {
@@ -53,7 +59,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello world you are connected!')
 })
 
 app.listen(port, () => {
